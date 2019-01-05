@@ -5,9 +5,10 @@ import App from './App'
 import router from './router'
 import Axios from 'Axios'
 import Vuex from 'vuex'
-import ElementUI from 'element-ui';
+import ElementUI from 'element-ui'
 
-import 'element-ui/lib/theme-chalk/index.css';
+import 'normalize.css'
+import 'element-ui/lib/theme-chalk/index.css'
 import './assets/iconfont/iconfont.css'
 // import './assets/css/global.scss'
 
