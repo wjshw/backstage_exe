@@ -5,27 +5,17 @@
 </el-container>
 <el-container>
   <el-header>
-    <el-menu :default-active="activeIndex2" mode="horizontal">
-      <el-menu-item index="1">处理中心</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
-        <el-submenu index="2-4">
-          <template slot="title">选项4</template>
-          <el-menu-item index="2-4-1">选项1</el-menu-item>
-          <el-menu-item index="2-4-2">选项2</el-menu-item>
-          <el-menu-item index="2-4-3">选项3</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="3" disabled>消息中心</el-menu-item>
-      <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+    <el-menu :default-active="0" mode="horizontal">
+      <el-menu-item :index="idx" v-for="(nav, idx) in navList" :key="idx">
+        <i class="icon" :class="nav.icon"></i>
+        <span slot="title">{{nav.title}}</span>
+      </el-menu-item>
     </el-menu>
   </el-header>
-  <el-container>
+  <router-view></router-view>
+  <!-- <el-container>
     <el-aside>
-      <el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+      <el-menu default-active="1-4-1" :collapse="isCollapse">
         <el-submenu index="1">
           <template slot="title">
             <i class="el-icon-location"></i>
@@ -59,14 +49,48 @@
       </el-menu>
     </el-aside>
     <el-main>main</el-main>
-  </el-container>
+  </el-container> -->
 </el-container>
 </div>
 </template>
 
 <script>
   export default {
-    name: 'App'
+    name: 'Index',
+    data(){
+      return {
+        navList:[{
+          icon: '',
+          title: '网吧现状',
+          route: ''
+        },
+        {
+          icon: 'el-icon-time',
+          title: '网吧配置',
+          route: ''
+        },
+        {
+          icon: '',
+          title: '会员',
+          route: ''
+        },
+        {
+          icon: '',
+          title: '水吧',
+          route: ''
+        },
+        {
+          icon: '',
+          title: '营销',
+          route: ''
+        },
+        {
+          icon: '',
+          title: '游戏',
+          route: ''
+        }]
+      }
+    }
   }
 </script>
 
