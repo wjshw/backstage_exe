@@ -12,9 +12,13 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './assets/iconfont/iconfont.css'
 // import './assets/css/global.scss'
 
+import iconfont from './components/common/iconfont.vue'
+
 Vue.use(Vuex)
 Vue.use(ElementUI);
 Vue.prototype.$axios = Axios
+
+Vue.component('iconfont', iconfont)
 
 Vue.config.productionTip = false
 
