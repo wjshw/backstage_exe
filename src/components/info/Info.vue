@@ -1,14 +1,14 @@
 <template>
 <el-container>
   <el-aside>
-      <el-scrollbar :native="false" wrapStyle="" wrapClass="" viewClass="" viewStyle="" noresize="false">
-    <el-menu default-active="$route/path" :collapse="isCollapse" router>
-      <el-menu-item index="2"><i class="el-icon-menu"></i>显示概况</el-menu-item>
-      <el-menu-item index="2"><i class="el-icon-menu"></i>经营分析</el-menu-item>
-      <el-menu-item index="2"><i class="el-icon-menu"></i>交班明细</el-menu-item>
-      <el-menu-item index="2"><i class="el-icon-menu"></i>网卡订单流水</el-menu-item>
+      <!-- <el-scrollbar :native="false" noresize="false"> -->
+    <el-menu default-active="$route.path" :collapse="isCollapse" router>
+      <el-menu-item index="/netbarinfo/overview"><iconfont>&#xe6c5;</iconfont>现时概况</el-menu-item>
+      <el-menu-item index="/netbarinfo/analysis"><iconfont>&#xe6c5;</iconfont>经营分析</el-menu-item>
+      <el-menu-item index="/netbarinfo/shift"><iconfont>&#xe6c5;</iconfont>交班明细</el-menu-item>
+      <el-menu-item index="/netbarinfo/order"><iconfont>&#xe6c5;</iconfont>网咖订单</el-menu-item>
     </el-menu>
-      </el-scrollbar>
+      <!-- </el-scrollbar> -->
   </el-aside>
   <router-view></router-view>
 </el-container>

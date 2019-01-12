@@ -18,6 +18,7 @@ Vue.use(Vuex)
 Vue.use(ElementUI);
 Vue.prototype.$axios = Axios
 
+// 注册组件
 Vue.component('iconfont', iconfont)
 
 Vue.config.productionTip = false
